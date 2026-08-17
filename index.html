@@ -7,8 +7,8 @@
     <style>
         /* Pro AI & Web Tech Theme */
         :root {
-            --bg-dark: #070913; /* Deep Tech Blue/Black */
-            --bg-card: #121629;
+            --bg-dark: #070913; 
+            --bg-card: rgba(18, 22, 41, 0.7); /* Thoda transparent banaya */
             --text-light: #ffffff;
             --text-grey: #a0aec0;
             --neon-cyan: #00f2fe;
@@ -19,7 +19,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            /* NAYA AESTHETIC BACKGROUND YAHAN HAI */
             background-color: var(--bg-dark);
+            background-image: linear-gradient(rgba(7, 9, 19, 0.85), rgba(7, 9, 19, 0.95)), url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-light);
             scroll-behavior: smooth;
         }
@@ -29,18 +34,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(7, 9, 19, 0.9);
+            background: rgba(7, 9, 19, 0.6);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
         }
 
         .logo {
             font-size: 26px;
             font-weight: 800;
-            /* Glowing Gradient Text */
             background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -60,12 +64,12 @@
 
         nav a:hover {
             color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
         }
         
         .hero {
             text-align: center;
             padding: 150px 20px;
-            background: radial-gradient(circle at center, #121a35 0%, var(--bg-dark) 70%);
         }
 
         .hero h1 {
@@ -104,7 +108,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.6);
         }
 
         .section-title {
@@ -112,6 +116,7 @@
             font-size: 38px;
             margin-bottom: 60px;
             font-weight: 700;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
         }
         
         .grid {
@@ -124,20 +129,20 @@
 
         .card {
             background-color: var(--bg-card);
+            backdrop-filter: blur(10px);
             padding: 40px 30px;
             border-radius: 12px;
             width: 340px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 242, 254, 0.1);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        /* Card Hover Glow Effect */
         .card:hover { 
             transform: translateY(-10px); 
             border-color: var(--neon-cyan);
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
         }
 
         .card h3 { 
@@ -171,9 +176,10 @@
         footer {
             text-align: center;
             padding: 50px 20px;
-            background-color: var(--bg-card);
+            background-color: rgba(18, 22, 41, 0.8);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             margin-top: 100px;
+            backdrop-filter: blur(10px);
         }
 
         footer h2 { margin-top: 0; }
@@ -218,7 +224,7 @@
         </div>
     </div>
 
-    <div id="work" style="padding: 100px 0; background-color: #080b17;">
+    <div id="work" style="padding: 100px 0;">
         <h2 class="section-title">Featured Projects</h2>
         <div class="grid">
             <div class="card">
@@ -242,4 +248,4 @@
     </footer>
 
 </body>
-    </html>
+                                              </html>
