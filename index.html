@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SM BrandForge | Agency</title>
+    <!-- Import Exact Premium Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Premium Light Corporate Theme */
         :root {
-            --primary-blue: #0066ff;
-            --light-blue: #e6f0ff;
-            --text-dark: #0f172a;
-            --text-grey: #64748b;
-            --bg-white: #ffffff;
-            --bg-page: #f8fafc;
+            --primary-blue: #005ee6;
+            --light-blue-bg: #f0f6ff;
+            --text-dark: #0b132b;
+            --text-grey: #4b5563;
+            --bg-page: #fafcff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-page);
@@ -24,82 +24,98 @@
             overflow-x: hidden;
         }
 
-        /* Subtle Blue Wave Background Effect */
-        .background-wrapper {
-            background: linear-gradient(135deg, #ffffff 0%, #eef5ff 50%, #e0edff 100%);
-            padding-bottom: 80px;
-        }
-
+        /* Perfect Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 60px;
+            padding: 25px 8%;
             background-color: transparent;
+            position: relative;
+            z-index: 10;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--primary-blue);
-            letter-spacing: 0.5px;
         }
 
         nav a {
-            color: var(--text-dark);
+            color: #000;
             text-decoration: none;
-            margin-left: 30px;
-            font-size: 13px;
+            margin-left: 35px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
+        /* Exact Left-Aligned Hero Section */
         .hero {
-            padding: 60px 60px 20px 60px;
-            max-width: 800px;
+            position: relative;
+            padding: 80px 8% 120px 8%;
+            text-align: left; /* Text exactly on the left */
+            background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);
+        }
+
+        /* Abstract Wave Background (Using CSS pseudo-element for exact vibe) */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 60%; height: 100%;
+            background: radial-gradient(ellipse at center right, #d4e5ff 0%, transparent 70%);
+            z-index: 0;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px; /* Restricts text width like the image */
         }
 
         .hero h1 {
-            font-size: 55px;
+            font-size: 52px;
             font-weight: 800;
             line-height: 1.15;
+            margin-top: 0;
+            margin-bottom: 25px;
             color: var(--text-dark);
-            margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: var(--primary-blue);
+            color: var(--primary-blue); /* Web & Advertisement in Blue */
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-grey);
-            line-height: 1.6;
-            max-width: 600px;
+            line-height: 1.7;
             margin-bottom: 40px;
+            max-width: 550px;
         }
 
         .btn {
-            background: linear-gradient(90deg, #0077ff, #00aeff);
+            background: linear-gradient(90deg, #0062ff, #009dff);
             color: white;
-            padding: 16px 35px;
+            padding: 14px 32px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
-            box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
+            font-size: 15px;
+            box-shadow: 0 10px 20px rgba(0, 98, 255, 0.25);
             display: inline-block;
-            transition: transform 0.2s;
         }
 
-        .btn:hover { transform: translateY(-3px); }
-
+        /* Section Titles with the Exact Blue Underline */
         .section-title {
             text-align: center;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
-            margin-top: 40px;
+            margin-top: 60px;
             margin-bottom: 50px;
             position: relative;
         }
@@ -107,129 +123,117 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 40px;
+            width: 45px;
             height: 3px;
             background: var(--primary-blue);
-            margin: 15px auto 0;
+            margin: 12px auto 0; /* Creates the little underline */
             border-radius: 2px;
         }
 
+        /* Exact Card Layouts */
         .grid {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 0 20px;
+            gap: 35px;
+            padding: 0 8%;
             flex-wrap: wrap;
+            margin-bottom: 60px;
         }
 
-        /* Services Cards */
-        .service-card {
-            background: var(--bg-white);
-            padding: 40px;
-            border-radius: 16px;
+        .card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
             width: 380px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 102, 255, 0.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+            border: 1px solid rgba(0, 94, 230, 0.06);
+            text-align: left;
         }
 
+        /* Square Icon Boxes inside Cards */
         .icon-box {
-            width: 50px;
-            height: 50px;
-            background: var(--light-blue);
+            width: 45px;
+            height: 45px;
+            background: var(--light-blue-bg);
             color: var(--primary-blue);
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 20px;
+            font-weight: 800;
+            font-size: 16px;
             margin-bottom: 25px;
-            border: 1px solid #cce0ff;
+            border: 1px solid #d4e5ff;
         }
 
-        .service-card h3 { font-size: 22px; margin-top: 0; margin-bottom: 15px; color: var(--text-dark); }
-        .service-card p { color: var(--text-grey); font-size: 15px; line-height: 1.6; margin: 0; }
+        .card h3 { font-size: 19px; margin-top: 0; margin-bottom: 12px; color: var(--text-dark); font-weight: 800;}
+        .card p { color: var(--text-grey); font-size: 14px; line-height: 1.6; margin: 0; }
 
-        /* Projects Cards */
-        .project-card {
-            background: var(--bg-white);
-            padding: 30px;
-            border-radius: 16px;
-            width: 420px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 102, 255, 0.05);
-            margin-bottom: 40px;
-        }
-
+        /* Media Placeholders exactly like image */
         .media-placeholder {
-            background: var(--light-blue);
-            border: 2px dashed #99c2ff;
-            height: 200px;
-            border-radius: 12px;
+            background: #f8fbff;
+            border: 1.5px dashed #adcfff;
+            height: 180px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             color: var(--primary-blue);
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 25px;
         }
 
-        .project-card h3 { font-size: 20px; margin-bottom: 10px; }
-        .project-card p { color: var(--text-grey); font-size: 14px; line-height: 1.6; }
-
-        /* Footer */
+        /* Exact Footer */
         footer {
             text-align: center;
-            padding: 60px 20px 40px 20px;
-            background: var(--bg-white);
-            border-top: 1px solid #eef2f6;
+            padding: 40px 20px 30px 20px;
+            background: #ffffff;
+            border-top: 1px solid #f0f0f0;
         }
 
-        footer h2 { font-size: 24px; margin-bottom: 15px; }
-        .contact-info { color: var(--text-grey); margin-bottom: 15px; font-size: 15px; }
-        .contact-links { color: var(--primary-blue); font-weight: bold; font-size: 15px; }
-        .copyright { color: #94a3b8; font-size: 13px; margin-top: 40px; }
+        footer h2 { font-size: 22px; margin-bottom: 12px; font-weight: 800;}
+        .contact-info { color: var(--text-grey); margin-bottom: 15px; font-size: 14px; }
+        .contact-links { color: var(--primary-blue); font-weight: 700; font-size: 14px; }
+        .copyright { color: #9ca3af; font-size: 12px; margin-top: 30px; }
 
-        /* Mobile View */
         @media (max-width: 768px) {
-            header { flex-direction: column; padding: 20px; gap: 15px; }
-            .hero { padding: 40px 20px; text-align: center; }
-            .hero h1 { font-size: 40px; }
-            .hero p { margin: 0 auto 30px auto; }
-            .service-card, .project-card { width: 100%; }
+            header { flex-direction: column; gap: 15px; }
+            .hero { padding: 40px 5%; text-align: center; }
+            .hero-content { margin: 0 auto; }
+            .card { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="background-wrapper">
-        <header>
-            <div class="logo">SM BrandForge</div>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#work">Our Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+    <header>
+        <div class="logo">SM BrandForge</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#work">Our Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-content">
             <h1>Building the Future of <br><span>Web & Advertisement</span></h1>
             <p>Hum ek premium tech agency hain. Modern, fast aur secure Websites design karne se lekar, AI-powered commercial Ads banane tak—hum brands ko ek nayi pehchaan dete hain.</p>
             <a href="#contact" class="btn">Start a Project</a>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <div id="services">
         <h2 class="section-title">What We Do</h2>
         <div class="grid">
-            <div class="service-card">
+            <div class="card">
                 <div class="icon-box">&lt;/&gt;</div>
                 <h3>Custom Web Design</h3>
                 <p>Professional websites, landing pages aur corporate portfolios. Hum aise designs banate hain jo fast load hote hain aur client ke business ko grow karte hain.</p>
             </div>
-            <div class="service-card">
+            <div class="card">
                 <div class="icon-box">▶</div>
                 <h3>Commercial Ad Creation</h3>
                 <p>High-end product promotion aur advertisement videos. Advanced creative tools ka use karke hum aisi ads banate hain jo audience ka dhyan kheenchti hain.</p>
@@ -240,17 +244,17 @@
     <div id="work">
         <h2 class="section-title">Featured Projects</h2>
         <div class="grid">
-            <div class="project-card">
+            <div class="card">
                 <div class="media-placeholder">
-                    <div style="font-size: 24px; margin-bottom: 10px;">🖼️</div>
+                    <div style="font-size: 20px; margin-bottom: 8px;">🖼️</div>
                     [Video/Image Space: Luxury Ad]
                 </div>
                 <h3>Luxury Brand Promo</h3>
                 <p>Premium fragrance aur apparel brands ke liye design kiye gaye high-quality commercial advertisements.</p>
             </div>
-            <div class="project-card">
+            <div class="card">
                 <div class="media-placeholder">
-                    <div style="font-size: 24px; margin-bottom: 10px;">🖼️</div>
+                    <div style="font-size: 20px; margin-bottom: 8px;">🖼️</div>
                     [Video/Image Space: Website]
                 </div>
                 <h3>Corporate Website</h3>
@@ -267,4 +271,4 @@
     </footer>
 
 </body>
-                                           </html>
+</html>
