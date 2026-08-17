@@ -3,107 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrandForge Agency | Web & Ads</title>
+    <title>SM BrandForge Agency | Web & Ads</title>
     <style>
-        /* Dark Premium Theme */
+        /* Pro AI & Web Tech Theme */
+        :root {
+            --bg-dark: #070913; /* Deep Tech Blue/Black */
+            --bg-card: #121629;
+            --text-light: #ffffff;
+            --text-grey: #a0aec0;
+            --neon-cyan: #00f2fe;
+            --neon-blue: #4facfe;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0d0d0d;
-            color: #ffffff;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
         }
+
         header {
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #141414;
-            border-bottom: 1px solid #333;
+            background: rgba(7, 9, 19, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
         }
+
         .logo {
             font-size: 26px;
-            font-weight: bold;
-            color: #e67e22; /* Premium Orange/Gold */
-            letter-spacing: 1px;
+            font-weight: 800;
+            /* Glowing Gradient Text */
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1.5px;
         }
+
         nav a {
-            color: #fff;
+            color: var(--text-light);
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 16px;
+            margin-left: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
-        nav a:hover { color: #e67e22; }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+        }
         
         .hero {
             text-align: center;
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
+            padding: 150px 20px;
+            background: radial-gradient(circle at center, #121a35 0%, var(--bg-dark) 70%);
         }
+
         .hero h1 {
-            font-size: 50px;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            font-size: 55px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
         }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .hero p {
             font-size: 20px;
-            color: #aaaaaa;
-            max-width: 700px;
+            color: var(--text-grey);
+            max-width: 750px;
             margin: 0 auto 40px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+
         .btn {
-            background-color: #e67e22;
-            color: #0d0d0d;
-            padding: 15px 35px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-cyan));
+            color: #000;
+            padding: 16px 40px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 30px;
             font-size: 18px;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            display: inline-block;
         }
-        .btn:hover { background-color: #cf6d17; }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+        }
 
         .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #fff;
+            font-size: 38px;
+            margin-bottom: 60px;
+            font-weight: 700;
         }
         
         .grid {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
             padding: 0 20px;
         }
+
         .card {
-            background-color: #141414;
-            padding: 30px;
-            border-radius: 8px;
-            width: 320px;
-            border: 1px solid #222;
-            transition: transform 0.3s;
+            background-color: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 12px;
+            width: 340px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .card:hover { transform: translateY(-10px); border-color: #e67e22; }
-        .card h3 { color: #e67e22; font-size: 22px; margin-top: 0;}
-        .card p { color: #999; line-height: 1.5; }
+
+        /* Card Hover Glow Effect */
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--neon-cyan);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+        }
+
+        .card h3 { 
+            color: var(--text-light); 
+            font-size: 24px; 
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .card p { 
+            color: var(--text-grey); 
+            line-height: 1.6; 
+            font-size: 16px;
+        }
+
+        .media-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(0, 242, 254, 0.05);
+            border: 1px dashed var(--neon-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--neon-cyan);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
 
         footer {
             text-align: center;
-            padding: 30px;
-            background-color: #141414;
-            border-top: 1px solid #222;
-            margin-top: 80px;
-            color: #666;
+            padding: 50px 20px;
+            background-color: var(--bg-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 100px;
         }
 
-        /* Mobile View Adjustment */
+        footer h2 { margin-top: 0; }
+        
+        .contact-info { color: var(--text-grey); margin-top: 20px; }
+
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; padding: 20px; }
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 40px; }
             .grid { flex-direction: column; align-items: center; }
         }
     </style>
@@ -111,57 +190,56 @@
 <body>
 
     <header>
-        <div class="logo">BrandForge Agency</div>
+        <div class="logo">SM BrandForge</div>
         <nav>
             <a href="#services">Services</a>
-            <a href="#portfolio">Our Work</a>
+            <a href="#work">Our Work</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Crafting Digital Experiences & Premium Visuals</h1>
-        <p>Hum brands ko zero se build karte hain. Advanced web development se lekar high-end product commercials tak, hum aapke business ko next level par le jate hain.</p>
+        <h1>Building the Future of <br><span>Web & Advertisement</span></h1>
+        <p>Hum ek premium tech agency hain. Modern, fast aur secure Websites design karne se lekar, AI-powered commercial Ads banane tak—hum brands ko ek nayi pehchaan dete hain.</p>
         <a href="#contact" class="btn">Start a Project</a>
     </section>
 
-    <div id="services" style="padding: 80px 0;">
-        <h2 class="section-title">Our Services</h2>
+    <div id="services" style="padding: 100px 0;">
+        <h2 class="section-title">What We Do</h2>
         <div class="grid">
             <div class="card">
-                <h3>Custom Web Development</h3>
-                <p>E-commerce stores, complex food delivery platforms, aur professional business websites. Hum fast, secure aur modern websites design karte hain.</p>
+                <h3>Custom Web Design</h3>
+                <p>Professional websites, landing pages aur corporate portfolios. Hum aise designs banate hain jo fast load hote hain aur client ke business ko grow karte hain.</p>
             </div>
             <div class="card">
-                <h3>Commercial Product Ads</h3>
-                <p>Premium visual narrative series aur product promotions. Hum advanced creative tools ka use karke aise commercials banate hain jo aapke product ki sales badhate hain.</p>
+                <h3>Commercial Ad Creation</h3>
+                <p>High-end product promotion aur advertisement videos. Advanced creative tools ka use karke hum aisi ads banate hain jo audience ka dhyan kheenchti hain.</p>
             </div>
         </div>
     </div>
 
-    <div id="portfolio" style="padding: 80px 0; background-color: #111;">
-        <h2 class="section-title">Featured Work</h2>
+    <div id="work" style="padding: 100px 0; background-color: #080b17;">
+        <h2 class="section-title">Featured Projects</h2>
         <div class="grid">
             <div class="card">
-                <h3>Luxury Fragrance Promo</h3>
-                <p>Ek high-end perfume brand ke liye banaya gaya visually stunning commercial narrative.</p>
+                <div class="media-placeholder">[Video/Image Space: Luxury Ad]</div>
+                <h3>Luxury Brand Promo</h3>
+                <p>Premium fragrance aur apparel brands ke liye design kiye gaye high-quality commercial advertisements.</p>
             </div>
             <div class="card">
-                <h3>Food Delivery Platform</h3>
-                <p>Restaurant aur customer tracking ke sath banaya gaya ek complete online food ordering system.</p>
-            </div>
-            <div class="card">
-                <h3>Premium Apparel Ad</h3>
-                <p>Clothing brand ke liye tayar ki gayi ek modern aur eye-catching video advertisement series.</p>
+                <div class="media-placeholder">[Video/Image Space: Website]</div>
+                <h3>Corporate Website</h3>
+                <p>Client ke business ke liye banayi gayi ek modern, responsive aur lead-generating professional website.</p>
             </div>
         </div>
     </div>
 
     <footer id="contact">
-        <h2>Ready to upgrade your brand?</h2>
-        <p>Email us: contact@brandforge.com | Phone: +91-XXXXXXXXXX</p>
-        <p style="margin-top: 20px;">© 2026 BrandForge Agency. All rights reserved.</p>
+        <h2>Ready to build something amazing?</h2>
+        <p class="contact-info">Drop us a message and let's start working on your next big project.</p>
+        <p class="contact-info" style="color: var(--neon-cyan); font-weight: bold;">Email: contact@smbrandforge.com | Call: +91-XXXXXXXXXX</p>
+        <p style="margin-top: 40px; color: #555; font-size: 14px;">© 2026 SM BrandForge Agency. All rights reserved.</p>
     </footer>
 
 </body>
-  </html>
+    </html>
